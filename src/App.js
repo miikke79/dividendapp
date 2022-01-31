@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import Dividends from './components/Dividends'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+
+  const [dividends, setDividends] = useState([]);
+
+
+  useEffect(() => {
+    fetchDividends();
+  }, []);
+
+
+  const fetchDividends = () => {
+    fetch("https://gist.githubusercontent.com/VincentLeV/a0c326b9cbeabf63b4e5e02aa9779f6c/raw/1165755ed5d4399218423dfd08e68a6ae3d43d85/shares.json")
+      .then((response) => response.json())
+      .then((data) => setDividends(data))
+      .catch((err) => console.error(err));
+  };
+
+    return (
+      <div className="App">
+        <h3>List of shares</h3>
+          {dividends.map((dividends, i) =><Dividends  dividends={dividends} key= {i}/>)} 
+      </div>
+    );
+  }
+  
+  export default App; 
