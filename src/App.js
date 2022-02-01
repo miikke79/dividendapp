@@ -21,7 +21,6 @@ function App() {
 
     return (
       <div className="App">
-        <h3>List of shares</h3>
           {dividends.map((dividends, i) =><Dividends  dividends={dividends} key= {i}/>)} 
       </div>
     );
