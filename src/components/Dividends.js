@@ -7,32 +7,14 @@ export default function Dividends({dividends}) {
   
   return (
     <div>
-      <table>
-        <tbody>
-          <tr>
-            <td>Share:</td><td>{dividends.share}</td>
-          </tr>
-          <tr>
-            <td>Company:</td><td>{dividends.company}</td>
-          </tr>
-          <tr>
-            <td>Price:</td><td>{dividends.price}</td>
-          </tr>
-          <tr>
-            <td>Last year dividend:</td><td>{dividends.dividendHistory[0].dividend}%</td>
-          </tr>
-          <tr>
-            <td>Dividend yield-%:</td><td>{dividendYields}%</td>
-          </tr>
-          <tr>
-            <td>5-year average dividend yield-%:</td><td>?</td>
-          </tr>
-          <tr>
-            <td>5-year weighted average dividend yield-%:</td><td>?</td>
-          </tr>
-        </tbody>
-      </table>
-      <br/>
+            <p>Share:   {dividends.share}</p>
+            <p>Company: {dividends.company}</p>
+            <p>Price: {dividends.price}</p>
+            <p>Last year dividend: {dividends.dividendHistory[0].dividend}%</p>
+            <p>Dividend yield-%: {dividendYields}%</p>
+            <p>5-year average dividend yield-%: ?</p>
+            <p>5-year weighted average dividend yield-%: ?</p>
+            <br/>
     </div>
   )
 
