@@ -1,3 +1,7 @@
+
+<!-- This is a comment to test the Collaboration feature in github with an alternative branch called README-CollaboratorTesting-notes-poolan by Raul Fernandez Poolan!-->
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
